@@ -20,7 +20,7 @@ jetha2=loadImage("Images/jethalal.png");
 jetha3=loadImage("Images/jethalal.png");
 gameOverImg=loadImage("Images/gameover.png");
 resetImg=loadImage("Images/reset.jpg");
-
+babitaSound=loadSound("Images/babita.mpeg");
 dayaSound=loadSound("Images/daya.mp3");
 
 }
@@ -91,6 +91,7 @@ else if(life==0){
 for(var i=0;i< babitaGrp.length;i++){
   if(babitaGrp.get(i).isTouching(jethalal)){
     babitaGrp.get(i).destroy();
+     babitaSound.play();
     score=score+1;
   }
 }
